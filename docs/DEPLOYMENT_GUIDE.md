@@ -146,7 +146,7 @@ npm run dev
    - **Root Directory**: `./`.
    - **Build Command**: `npm run build`.
    - **Output Directory**: `dist`.
-   - **Install Command**: `npm install --legacy-peer-deps`.
+   - **Install Command**: Default (auto-detects `npm install` / `npm ci` with zero flags).
 4. **Add Environment Variables**:
    - Enter all variables from Section 4.1 in Vercel Settings → Environment Variables.
    - Leave `VITE_API_URL` empty to use same-origin `/api/v1`.
