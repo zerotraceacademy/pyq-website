@@ -1,0 +1,6 @@
+{
+  "name": "PYQVerse",
+  "description": "Intelligent Previous Year Questions (PYQ) platform with verified solutions, timed mock exams, performance analytics, and Gemini AI tutor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,927 @@
+{
+  "users": [
+    {
+      "id": "usr_student_demo",
+      "name": "Aarav Sharma",
+      "email": "student@pyqverse.edu",
+      "role": "student",
+      "targetExam": "JEE Advanced & Main",
+      "preferredLanguage": "english",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80",
+      "createdAt": "2025-01-10T08:00:00Z"
+    },
+    {
+      "id": "usr_editor_demo",
+      "name": "Priya Mukherjee (Educator)",
+      "email": "editor@pyqverse.edu",
+      "role": "editor",
+      "targetExam": "NEET UG & Boards",
+      "preferredLanguage": "hinglish",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&q=80",
+      "createdAt": "2025-01-05T09:30:00Z"
+    },
+    {
+      "id": "usr_admin_demo",
+      "name": "Prof. Rajesh Kulkarni (Admin)",
+      "email": "admin@pyqverse.edu",
+      "role": "admin",
+      "targetExam": "All National Exams",
+      "preferredLanguage": "english",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
+      "createdAt": "2024-12-01T10:00:00Z"
+    }
+  ],
+  "exams": [
+    {
+      "id": "ex_jee_main",
+      "slug": "jee-main",
+      "name": "JEE Main (Engineering)",
+      "shortCode": "JEE-M",
+      "category": "Entrance",
+      "conductingBody": "National Testing Agency (NTA)",
+      "description": "National level engineering entrance examination for admission to NITs, IIITs, and qualifying for JEE Advanced.",
+      "totalPapers": 28,
+      "totalQuestions": 1420,
+      "subjects": [
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "ex_jee_adv",
+      "slug": "jee-advanced",
+      "name": "JEE Advanced (IIT Entrance)",
+      "shortCode": "JEE-Adv",
+      "category": "Entrance",
+      "conductingBody": "IIT Consortium / Joint Admission Board",
+      "description": "Premier engineering entrance test for direct admission into undergraduate programs at 23 Indian Institutes of Technology.",
+      "totalPapers": 16,
+      "totalQuestions": 840,
+      "subjects": [
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "ex_neet_ug",
+      "slug": "neet-ug",
+      "name": "NEET UG (Medical)",
+      "shortCode": "NEET",
+      "category": "Entrance",
+      "conductingBody": "National Testing Agency (NTA)",
+      "description": "Single national entrance examination for admission to MBBS, BDS, and allied healthcare seats across India.",
+      "totalPapers": 18,
+      "totalQuestions": 1260,
+      "subjects": [
+        "Physics",
+        "Chemistry",
+        "Biology (Botany & Zoology)"
+      ]
+    },
+    {
+      "id": "ex_gate_cs",
+      "slug": "gate-cs",
+      "name": "GATE Computer Science & IT",
+      "shortCode": "GATE-CS",
+      "category": "Competitive",
+      "conductingBody": "IISc Bangalore & IITs",
+      "description": "Graduate Aptitude Test in Engineering for M.Tech admissions at IISc/IITs and PSU recruitment in Computer Science.",
+      "totalPapers": 14,
+      "totalQuestions": 910,
+      "subjects": [
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Computer Networks",
+        "Database Management"
+      ]
+    },
+    {
+      "id": "ex_cbse_12",
+      "slug": "cbse-class-12",
+      "name": "CBSE Class 12 Board Examinations",
+      "shortCode": "CBSE-12",
+      "category": "School Board",
+      "conductingBody": "Central Board of Secondary Education",
+      "description": "Official all-India senior secondary school board question papers with marking schemes and step-marking solutions.",
+      "totalPapers": 22,
+      "totalQuestions": 780,
+      "subjects": [
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Biology"
+      ]
+    },
+    {
+      "id": "ex_aktu_btech",
+      "slug": "aktu-btech-cse",
+      "name": "AKTU B.Tech CSE Semester Exams",
+      "shortCode": "AKTU",
+      "category": "University",
+      "conductingBody": "Dr. A.P.J. Abdul Kalam Technical University",
+      "description": "Previous end-semester university question papers for Computer Science & Engineering branches.",
+      "totalPapers": 15,
+      "totalQuestions": 510,
+      "subjects": [
+        "Data Structures",
+        "Operating Systems",
+        "Discrete Mathematics"
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "id": "sub_physics",
+      "slug": "physics",
+      "name": "Physics",
+      "code": "PHY-01",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "topicsCount": 16,
+      "papersCount": 28,
+      "description": "Mechanics, Electrodynamics, Optics, Thermodynamics, Modern Physics, and Semiconductor Devices."
+    },
+    {
+      "id": "sub_chem",
+      "slug": "chemistry",
+      "name": "Chemistry",
+      "code": "CHM-01",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "topicsCount": 18,
+      "papersCount": 28,
+      "description": "Physical Chemistry, Inorganic Chemistry, Coordination Compounds, and Organic Reaction Mechanisms."
+    },
+    {
+      "id": "sub_math",
+      "slug": "mathematics",
+      "name": "Mathematics",
+      "code": "MTH-01",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "topicsCount": 15,
+      "papersCount": 28,
+      "description": "Calculus, Vectors & 3D Geometry, Coordinate Geometry, Matrices, Probability, and Complex Numbers."
+    },
+    {
+      "id": "sub_gate_dsa",
+      "slug": "data-structures-algorithms",
+      "name": "Data Structures & Algorithms",
+      "code": "CS-DSA",
+      "examId": "ex_gate_cs",
+      "examName": "GATE Computer Science & IT",
+      "topicsCount": 12,
+      "papersCount": 14,
+      "description": "Asymptotic Analysis, Trees, Heaps, Graph Algorithms, Dynamic Programming, and Greedy Paradigms."
+    },
+    {
+      "id": "sub_gate_os",
+      "slug": "operating-systems",
+      "name": "Operating Systems",
+      "code": "CS-OS",
+      "examId": "ex_gate_cs",
+      "examName": "GATE Computer Science & IT",
+      "topicsCount": 10,
+      "papersCount": 14,
+      "description": "Process Synchronization, Semaphores, CPU Scheduling, Virtual Memory, Paging, and File Systems."
+    }
+  ],
+  "topics": [
+    {
+      "id": "top_rotational",
+      "name": "Rotational Dynamics & Moment of Inertia",
+      "subjectId": "sub_physics",
+      "subjectName": "Physics",
+      "examId": "ex_jee_main",
+      "frequencyScore": "Very High",
+      "papersMapped": 24,
+      "questionsCount": 78
+    },
+    {
+      "id": "top_thermo",
+      "name": "Thermodynamics & Carnot Cycles",
+      "subjectId": "sub_physics",
+      "subjectName": "Physics",
+      "examId": "ex_jee_main",
+      "frequencyScore": "Very High",
+      "papersMapped": 26,
+      "questionsCount": 84
+    },
+    {
+      "id": "top_electromag",
+      "name": "Electromagnetic Induction & AC Circuits",
+      "subjectId": "sub_physics",
+      "subjectName": "Physics",
+      "examId": "ex_jee_main",
+      "frequencyScore": "High",
+      "papersMapped": 20,
+      "questionsCount": 65
+    },
+    {
+      "id": "top_organic_mech",
+      "name": "Aldehydes, Ketones & Nucleophilic Additions",
+      "subjectId": "sub_chem",
+      "subjectName": "Chemistry",
+      "examId": "ex_jee_main",
+      "frequencyScore": "Very High",
+      "papersMapped": 25,
+      "questionsCount": 92
+    },
+    {
+      "id": "top_definite_int",
+      "name": "Definite Integrals & Area under Curves",
+      "subjectId": "sub_math",
+      "subjectName": "Mathematics",
+      "examId": "ex_jee_main",
+      "frequencyScore": "Very High",
+      "papersMapped": 28,
+      "questionsCount": 110
+    },
+    {
+      "id": "top_graphs_tree",
+      "name": "Binary Search Trees & AVL Balancing",
+      "subjectId": "sub_gate_dsa",
+      "subjectName": "Data Structures & Algorithms",
+      "examId": "ex_gate_cs",
+      "frequencyScore": "Very High",
+      "papersMapped": 14,
+      "questionsCount": 56
+    },
+    {
+      "id": "top_concurrency",
+      "name": "Process Synchronization & Peterson Algorithm",
+      "subjectId": "sub_gate_os",
+      "subjectName": "Operating Systems",
+      "examId": "ex_gate_cs",
+      "frequencyScore": "High",
+      "papersMapped": 13,
+      "questionsCount": 42
+    }
+  ],
+  "papers": [
+    {
+      "id": "pap_jee_2024_s1",
+      "slug": "jee-main-2024-session-1-shift-1",
+      "title": "JEE Main 2024 Session 1 (27 Jan Morning Shift)",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "institution": "NTA Official Archive",
+      "year": 2024,
+      "session": "January Shift 1",
+      "paperType": "Official Exam",
+      "durationMinutes": 180,
+      "maxMarks": 300,
+      "language": "English & Hindi",
+      "r2ObjectKey": "papers/2024/jee-main/27jan-shift1-official.pdf",
+      "fileSizeBytes": 3450000,
+      "verifiedSolutionAvailable": true,
+      "reviewStatus": "published",
+      "checksum": "e9b21f3089d7149a4",
+      "downloadsCount": 14820,
+      "viewsCount": 38200,
+      "createdAt": "2024-02-05T10:00:00Z"
+    },
+    {
+      "id": "pap_jee_2024_s2",
+      "slug": "jee-main-2024-session-2-shift-1",
+      "title": "JEE Main 2024 Session 2 (04 April Morning Shift)",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "institution": "NTA Official Archive",
+      "year": 2024,
+      "session": "April Shift 1",
+      "paperType": "Official Exam",
+      "durationMinutes": 180,
+      "maxMarks": 300,
+      "language": "English & Hindi",
+      "r2ObjectKey": "papers/2024/jee-main/04apr-shift1-official.pdf",
+      "fileSizeBytes": 3820000,
+      "verifiedSolutionAvailable": true,
+      "reviewStatus": "published",
+      "checksum": "b4a11f9019d8839c1",
+      "downloadsCount": 11950,
+      "viewsCount": 29400,
+      "createdAt": "2024-04-12T10:00:00Z"
+    },
+    {
+      "id": "pap_jee_adv_2024_p1",
+      "slug": "jee-advanced-2024-paper-1",
+      "title": "JEE Advanced 2024 Paper 1 (Official IIT Madras)",
+      "examId": "ex_jee_adv",
+      "examName": "JEE Advanced (IIT Entrance)",
+      "institution": "IIT Madras (Organizing Institute)",
+      "year": 2024,
+      "session": "Morning Session",
+      "paperType": "Official Exam",
+      "durationMinutes": 180,
+      "maxMarks": 180,
+      "language": "English",
+      "r2ObjectKey": "papers/2024/jee-adv/paper1-official.pdf",
+      "fileSizeBytes": 4200000,
+      "verifiedSolutionAvailable": true,
+      "reviewStatus": "published",
+      "checksum": "c881fa49019d779a9",
+      "downloadsCount": 21300,
+      "viewsCount": 54100,
+      "createdAt": "2024-06-02T10:00:00Z"
+    },
+    {
+      "id": "pap_gate_cs_2024",
+      "slug": "gate-cs-2024-official",
+      "title": "GATE 2024 Computer Science & Information Technology",
+      "examId": "ex_gate_cs",
+      "examName": "GATE Computer Science & IT",
+      "institution": "IISc Bangalore",
+      "year": 2024,
+      "session": "Forenoon Session",
+      "paperType": "Official Exam",
+      "durationMinutes": 180,
+      "maxMarks": 100,
+      "language": "English",
+      "r2ObjectKey": "papers/2024/gate/cs-2024-official.pdf",
+      "fileSizeBytes": 2900000,
+      "verifiedSolutionAvailable": true,
+      "reviewStatus": "published",
+      "checksum": "fa1129b870a6c5182",
+      "downloadsCount": 9400,
+      "viewsCount": 24700,
+      "createdAt": "2024-02-18T10:00:00Z"
+    },
+    {
+      "id": "pap_cbse_12_phy_2024",
+      "slug": "cbse-class-12-physics-2024-set-1",
+      "title": "CBSE Class 12 Physics Board Paper 2024 (Series 55/1/1)",
+      "examId": "ex_cbse_12",
+      "examName": "CBSE Class 12 Board Examinations",
+      "institution": "Central Board of Secondary Education",
+      "year": 2024,
+      "session": "March Annual Board",
+      "paperType": "Official Exam",
+      "durationMinutes": 180,
+      "maxMarks": 70,
+      "language": "English & Hindi",
+      "r2ObjectKey": "papers/2024/cbse12/physics-series-55-1-1.pdf",
+      "fileSizeBytes": 2100000,
+      "verifiedSolutionAvailable": true,
+      "reviewStatus": "published",
+      "checksum": "e7192ab189c445690",
+      "downloadsCount": 16500,
+      "viewsCount": 41200,
+      "createdAt": "2024-03-10T10:00:00Z"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_phy_01",
+      "paperId": "pap_jee_2024_s1",
+      "paperTitle": "JEE Main 2024 Session 1 (27 Jan Morning Shift)",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "subjectId": "sub_physics",
+      "subjectName": "Physics",
+      "topicId": "top_rotational",
+      "topicName": "Rotational Dynamics & Moment of Inertia",
+      "year": 2024,
+      "questionNumber": 1,
+      "questionText": "A solid sphere of mass M and radius R rolls without slipping down an inclined plane of inclination θ. What is the linear acceleration of the center of mass of the sphere along the incline?",
+      "options": [
+        {
+          "key": "A",
+          "text": "(5/7) g sin θ"
+        },
+        {
+          "key": "B",
+          "text": "(2/3) g sin θ"
+        },
+        {
+          "key": "C",
+          "text": "(5/9) g sin θ"
+        },
+        {
+          "key": "D",
+          "text": "(3/5) g sin θ"
+        }
+      ],
+      "correctAnswer": "A",
+      "marks": 4,
+      "negativeMarks": 1,
+      "difficulty": "Medium",
+      "verifiedSolution": {
+        "finalAnswer": "Option A: (5/7) g sin θ",
+        "stepByStep": [
+          "Equation of motion down the incline: M g sin θ - f = M a, where f is the friction force.",
+          "Torque about center of mass: τ = f · R = I α = (2/5 M R²) · (a / R).",
+          "Hence, friction force f = (2/5) M a.",
+          "Substituting into linear equation: M g sin θ - (2/5) M a = M a.",
+          "Therefore: (7/5) M a = M g sin θ ⇒ a = (5/7) g sin θ."
+        ],
+        "keyConcept": "Pure rolling constraint without slipping requires a = α R. Solid sphere moment of inertia is I = 2/5 M R².",
+        "commonMistakes": "Students often forget the factor of 2/5 for a solid sphere and mistakenly use 1/2 (cylinder/disc) yielding 2/3 g sin θ."
+      }
+    },
+    {
+      "id": "q_phy_02",
+      "paperId": "pap_jee_2024_s1",
+      "paperTitle": "JEE Main 2024 Session 1 (27 Jan Morning Shift)",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "subjectId": "sub_physics",
+      "subjectName": "Physics",
+      "topicId": "top_thermo",
+      "topicName": "Thermodynamics & Carnot Cycles",
+      "year": 2024,
+      "questionNumber": 2,
+      "questionText": "A Carnot engine operates with an efficiency of 40% when the temperature of the sink is 300 K. By how much must the temperature of the source be increased to raise its efficiency to 50%?",
+      "options": [
+        {
+          "key": "A",
+          "text": "100 K"
+        },
+        {
+          "key": "B",
+          "text": "50 K"
+        },
+        {
+          "key": "C",
+          "text": "150 K"
+        },
+        {
+          "key": "D",
+          "text": "75 K"
+        }
+      ],
+      "correctAnswer": "A",
+      "marks": 4,
+      "negativeMarks": 1,
+      "difficulty": "Easy",
+      "verifiedSolution": {
+        "finalAnswer": "Option A: 100 K",
+        "stepByStep": [
+          "Efficiency formula: η = 1 - (T_sink / T_source).",
+          "Case 1: 0.40 = 1 - (300 / T_source_1) ⇒ 300 / T_source_1 = 0.60 ⇒ T_source_1 = 500 K.",
+          "Case 2: To make η = 0.50 with same sink (300 K): 0.50 = 1 - (300 / T_source_2) ⇒ 300 / T_source_2 = 0.50 ⇒ T_source_2 = 600 K.",
+          "Increase required in source temperature = T_source_2 - T_source_1 = 600 - 500 = 100 K."
+        ],
+        "keyConcept": "Carnot cycle efficiency depends strictly on absolute temperatures in Kelvin: η = 1 - T_L/T_H.",
+        "commonMistakes": "Directly scaling temperature by percentages without converting to the reciprocal ratio."
+      }
+    },
+    {
+      "id": "q_chem_01",
+      "paperId": "pap_jee_2024_s1",
+      "paperTitle": "JEE Main 2024 Session 1 (27 Jan Morning Shift)",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "subjectId": "sub_chem",
+      "subjectName": "Chemistry",
+      "topicId": "top_organic_mech",
+      "topicName": "Aldehydes, Ketones & Nucleophilic Additions",
+      "year": 2024,
+      "questionNumber": 3,
+      "questionText": "Which of the following compounds gives a positive iodoform test upon treatment with I₂ and aqueous NaOH?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pentan-3-one"
+        },
+        {
+          "key": "B",
+          "text": "Pentan-2-one"
+        },
+        {
+          "key": "C",
+          "text": "Benzophenone"
+        },
+        {
+          "key": "D",
+          "text": "Methanol"
+        }
+      ],
+      "correctAnswer": "B",
+      "marks": 4,
+      "negativeMarks": 1,
+      "difficulty": "Easy",
+      "verifiedSolution": {
+        "finalAnswer": "Option B: Pentan-2-one",
+        "stepByStep": [
+          "The haloform/iodoform reaction requires compounds containing the methyl carbonyl group (CH₃-C=O) or methyl carbinol group (CH₃-CH(OH)-).",
+          "Pentan-3-one is CH₃-CH₂-CO-CH₂-CH₃ (no CH₃-CO group).",
+          "Pentan-2-one is CH₃-CO-CH₂-CH₂-CH₃ (contains the essential CH₃-CO group).",
+          "Hence, only Pentan-2-one forms the yellow precipitate of CHI₃."
+        ],
+        "keyConcept": "Iodoform reaction specifically tests for methyl ketones and secondary alcohols with a terminal methyl group.",
+        "commonMistakes": "Confusing symmetrical ketones (like pentan-3-one) with 2-ones."
+      }
+    },
+    {
+      "id": "q_math_01",
+      "paperId": "pap_jee_2024_s1",
+      "paperTitle": "JEE Main 2024 Session 1 (27 Jan Morning Shift)",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "subjectId": "sub_math",
+      "subjectName": "Mathematics",
+      "topicId": "top_definite_int",
+      "topicName": "Definite Integrals & Area under Curves",
+      "year": 2024,
+      "questionNumber": 4,
+      "questionText": "Evaluate the definite integral: I = ∫ [0 to π/2] (sin^3 x) / (sin^3 x + cos^3 x) dx.",
+      "options": [
+        {
+          "key": "A",
+          "text": "π / 2"
+        },
+        {
+          "key": "B",
+          "text": "π / 4"
+        },
+        {
+          "key": "C",
+          "text": "π / 8"
+        },
+        {
+          "key": "D",
+          "text": "1"
+        }
+      ],
+      "correctAnswer": "B",
+      "marks": 4,
+      "negativeMarks": 1,
+      "difficulty": "Medium",
+      "verifiedSolution": {
+        "finalAnswer": "Option B: π / 4",
+        "stepByStep": [
+          "Let I = ∫ [0 to π/2] (sin³ x) / (sin³ x + cos³ x) dx   --- (1)",
+          "Applying property ∫ [0 to a] f(x) dx = ∫ [0 to a] f(a - x) dx:",
+          "x → π/2 - x gives sin(π/2 - x) = cos x and cos(π/2 - x) = sin x.",
+          "So I = ∫ [0 to π/2] (cos³ x) / (cos³ x + sin³ x) dx   --- (2)",
+          "Adding (1) and (2): 2I = ∫ [0 to π/2] 1 dx = [x] from 0 to π/2 = π/2.",
+          "Therefore, I = π / 4."
+        ],
+        "keyConcept": "Kings property of definite integrals: ∫ [0 to a] f(x) dx = ∫ [0 to a] f(a - x) dx simplifies symmetric trigonometric quotients.",
+        "commonMistakes": "Trying to evaluate using powers of sin x or trigonometric substitutions instead of applying King's rule."
+      }
+    },
+    {
+      "id": "q_gate_01",
+      "paperId": "pap_gate_cs_2024",
+      "paperTitle": "GATE 2024 Computer Science & Information Technology",
+      "examId": "ex_gate_cs",
+      "examName": "GATE Computer Science & IT",
+      "subjectId": "sub_gate_dsa",
+      "subjectName": "Data Structures & Algorithms",
+      "topicId": "top_graphs_tree",
+      "topicName": "Binary Search Trees & AVL Balancing",
+      "year": 2024,
+      "questionNumber": 1,
+      "questionText": "What is the maximum number of nodes in an AVL tree of height 4 (where height of an empty tree is -1, and single root node has height 0)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "31"
+        },
+        {
+          "key": "B",
+          "text": "15"
+        },
+        {
+          "key": "C",
+          "text": "20"
+        },
+        {
+          "key": "D",
+          "text": "12"
+        }
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "negativeMarks": 0.33,
+      "difficulty": "Medium",
+      "verifiedSolution": {
+        "finalAnswer": "Option A: 31",
+        "stepByStep": [
+          "The maximum number of nodes in any binary tree of height h occurs when the tree is a complete/perfect binary tree.",
+          "For a perfect binary tree of height h: N_max(h) = 2^(h+1) - 1.",
+          "Given h = 4: N_max(4) = 2^(4+1) - 1 = 2^5 - 1 = 32 - 1 = 31.",
+          "Since an AVL tree allows balance factor 0 (perfect balance), a perfect tree is also a valid AVL tree."
+        ],
+        "keyConcept": "Maximum nodes for an AVL tree is identical to a perfect binary tree: 2^(h+1) - 1. Minimum nodes follows the recurrence N(h) = N(h-1) + N(h-2) + 1.",
+        "commonMistakes": "Confusing maximum nodes with minimum nodes (which would be Fibonacci based)."
+      }
+    },
+    {
+      "id": "q_gate_02",
+      "paperId": "pap_gate_cs_2024",
+      "paperTitle": "GATE 2024 Computer Science & Information Technology",
+      "examId": "ex_gate_cs",
+      "examName": "GATE Computer Science & IT",
+      "subjectId": "sub_gate_os",
+      "subjectName": "Operating Systems",
+      "topicId": "top_concurrency",
+      "topicName": "Process Synchronization & Peterson Algorithm",
+      "year": 2024,
+      "questionNumber": 2,
+      "questionText": "Peterson's solution for mutual exclusion between two processes guarantees which of the following properties?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mutual Exclusion and Progress only"
+        },
+        {
+          "key": "B",
+          "text": "Mutual Exclusion and Bounded Waiting only"
+        },
+        {
+          "key": "C",
+          "text": "Mutual Exclusion, Progress, and Bounded Waiting"
+        },
+        {
+          "key": "D",
+          "text": "Hardware atomic execution without busy waiting"
+        }
+      ],
+      "correctAnswer": "C",
+      "marks": 2,
+      "negativeMarks": 0.66,
+      "difficulty": "Hard",
+      "verifiedSolution": {
+        "finalAnswer": "Option C: Mutual Exclusion, Progress, and Bounded Waiting",
+        "stepByStep": [
+          "Peterson's algorithm uses two shared variables: boolean flag[2] and int turn.",
+          "1. Mutual Exclusion: At most one process can enter the critical section because (flag[j] && turn == j) cannot be false for both simultaneously.",
+          "2. Progress: A process wishing to enter is not prevented by a non-competing process.",
+          "3. Bounded Waiting: A process waits at most one entry by the rival process, satisfying bounded waiting."
+        ],
+        "keyConcept": "A correct critical-section solution must satisfy all three core requirements: Mutual Exclusion, Progress, and Bounded Waiting.",
+        "commonMistakes": "Thinking Peterson's solution causes starvation; the turn variable guarantees bounded waiting."
+      }
+    }
+  ],
+  "mockTests": [
+    {
+      "id": "mock_jee_sprint_2025",
+      "title": "JEE Main 2025 High-Yield Diagnostic Mock Test",
+      "examId": "ex_jee_main",
+      "examName": "JEE Main (Engineering)",
+      "subjectName": "Physics, Chemistry & Mathematics",
+      "durationMinutes": 45,
+      "totalQuestions": 4,
+      "maxMarks": 16,
+      "negativeMarkingRatio": 0.25,
+      "instructions": [
+        "Test contains 4 questions covering core physics, chemistry and mathematics topics.",
+        "Each correct response awards +4 marks.",
+        "Each incorrect response deducts -1 mark (negative marking applied).",
+        "Unanswered questions incur 0 marks.",
+        "Exam interface is server-authoritative. Timer auto-submits upon zero."
+      ],
+      "questionIds": [
+        "q_phy_01",
+        "q_phy_02",
+        "q_chem_01",
+        "q_math_01"
+      ],
+      "attemptsCount": 382,
+      "avgScore": 9.8
+    },
+    {
+      "id": "mock_gate_cs_fast",
+      "title": "GATE CS Fast Assessment Mock Test",
+      "examId": "ex_gate_cs",
+      "examName": "GATE Computer Science & IT",
+      "subjectName": "Data Structures & Operating Systems",
+      "durationMinutes": 30,
+      "totalQuestions": 2,
+      "maxMarks": 3,
+      "negativeMarkingRatio": 0.33,
+      "instructions": [
+        "Test contains official GATE standard questions.",
+        "Negative marking of 1/3rd marks for wrong answers.",
+        "Use question palette to navigate and mark for review."
+      ],
+      "questionIds": [
+        "q_gate_01",
+        "q_gate_02"
+      ],
+      "attemptsCount": 194,
+      "avgScore": 1.9
+    }
+  ],
+  "attempts": [
+    {
+      "id": "att_demo_01",
+      "userId": "usr_student_demo",
+      "mockTestId": "mock_jee_sprint_2025",
+      "mockTestTitle": "JEE Main 2025 High-Yield Diagnostic Mock Test",
+      "examName": "JEE Main (Engineering)",
+      "startedAt": "2025-02-14T14:00:00Z",
+      "submittedAt": "2025-02-14T14:38:20Z",
+      "status": "completed",
+      "timeRemainingSeconds": 400,
+      "answers": {
+        "q_phy_01": {
+          "questionId": "q_phy_01",
+          "selectedOption": "A",
+          "timeSpentSeconds": 420,
+          "markedForReview": false,
+          "isCorrect": true,
+          "scoreAwarded": 4
+        },
+        "q_phy_02": {
+          "questionId": "q_phy_02",
+          "selectedOption": "A",
+          "timeSpentSeconds": 310,
+          "markedForReview": false,
+          "isCorrect": true,
+          "scoreAwarded": 4
+        },
+        "q_chem_01": {
+          "questionId": "q_chem_01",
+          "selectedOption": "A",
+          "timeSpentSeconds": 260,
+          "markedForReview": false,
+          "isCorrect": false,
+          "scoreAwarded": -1
+        },
+        "q_math_01": {
+          "questionId": "q_math_01",
+          "selectedOption": "B",
+          "timeSpentSeconds": 510,
+          "markedForReview": false,
+          "isCorrect": true,
+          "scoreAwarded": 4
+        }
+      },
+      "score": 11,
+      "maxMarks": 16,
+      "accuracyPercentage": 75,
+      "correctCount": 3,
+      "incorrectCount": 1,
+      "unansweredCount": 0,
+      "totalTimeSpentSeconds": 1500
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "mst_01",
+      "userId": "usr_student_demo",
+      "questionId": "q_chem_01",
+      "questionText": "Which of the following compounds gives a positive iodoform test upon treatment with I₂ and aqueous NaOH?",
+      "subjectName": "Chemistry",
+      "topicName": "Aldehydes, Ketones & Nucleophilic Additions",
+      "examName": "JEE Main (Engineering)",
+      "yourAnswer": "Pentan-3-one (Option A)",
+      "correctAnswer": "Pentan-2-one (Option B)",
+      "status": "unresolved",
+      "studentNotes": "Forgot that iodoform strictly needs methyl ketone (CH3-CO). Pentan-3-one has ethyl groups on both sides.",
+      "sourceType": "mock_test",
+      "recordedAt": "2025-02-14T14:39:00Z"
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": "bm_01",
+      "userId": "usr_student_demo",
+      "itemType": "paper",
+      "itemId": "pap_jee_2024_s1",
+      "title": "JEE Main 2024 Session 1 (27 Jan Morning Shift)",
+      "subtitle": "NTA Official Archive · 2024 · 300 Marks",
+      "notes": "Contains very good rotational dynamics questions for revision.",
+      "createdAt": "2025-02-10T12:00:00Z"
+    },
+    {
+      "id": "bm_02",
+      "userId": "usr_student_demo",
+      "itemType": "question",
+      "itemId": "q_math_01",
+      "title": "Kings Property Definite Integral",
+      "subtitle": "Mathematics · JEE Main 2024",
+      "notes": "Revise before test: ∫[0 to a] f(x) = ∫[0 to a] f(a-x).",
+      "createdAt": "2025-02-12T16:00:00Z"
+    }
+  ],
+  "studyPlans": [
+    {
+      "id": "plan_aarav_jee",
+      "userId": "usr_student_demo",
+      "targetExam": "JEE Main (Engineering)",
+      "examDate": "2025-04-06",
+      "dailyHours": 4,
+      "weakTopics": [
+        "Organic Reaction Mechanisms",
+        "Rotational Dynamics"
+      ],
+      "totalTasks": 6,
+      "completedTasks": 3,
+      "tasks": [
+        {
+          "id": "tsk_01",
+          "title": "Solve 2023-2024 Aldehydes & Ketones PYQs",
+          "subject": "Chemistry",
+          "topic": "Aldehydes, Ketones & Nucleophilic Additions",
+          "targetQuestions": 15,
+          "estimatedMinutes": 60,
+          "completed": true,
+          "dueDate": "2025-02-15",
+          "priority": "high"
+        },
+        {
+          "id": "tsk_02",
+          "title": "Review Iodoform & Cannizzaro Reaction Notes",
+          "subject": "Chemistry",
+          "topic": "Aldehydes, Ketones & Nucleophilic Additions",
+          "targetQuestions": 5,
+          "estimatedMinutes": 30,
+          "completed": true,
+          "dueDate": "2025-02-16",
+          "priority": "high"
+        },
+        {
+          "id": "tsk_03",
+          "title": "Rotational Motion Pure Rolling Problems",
+          "subject": "Physics",
+          "topic": "Rotational Dynamics & Moment of Inertia",
+          "targetQuestions": 12,
+          "estimatedMinutes": 75,
+          "completed": true,
+          "dueDate": "2025-02-17",
+          "priority": "high"
+        },
+        {
+          "id": "tsk_04",
+          "title": "Attempt JEE Main Full Mock Test 2024 Shift 2",
+          "subject": "Full Syllabus",
+          "topic": "Timed Simulation",
+          "targetQuestions": 75,
+          "estimatedMinutes": 180,
+          "completed": false,
+          "dueDate": "2025-02-18",
+          "priority": "high"
+        },
+        {
+          "id": "tsk_05",
+          "title": "Definite Integrals Area Under Curve Drill",
+          "subject": "Mathematics",
+          "topic": "Definite Integrals & Area under Curves",
+          "targetQuestions": 20,
+          "estimatedMinutes": 90,
+          "completed": false,
+          "dueDate": "2025-02-19",
+          "priority": "medium"
+        },
+        {
+          "id": "tsk_06",
+          "title": "Mistake Notebook Weekly Consolidation",
+          "subject": "Revision",
+          "topic": "Error Analysis",
+          "targetQuestions": 10,
+          "estimatedMinutes": 45,
+          "completed": false,
+          "dueDate": "2025-02-20",
+          "priority": "medium"
+        }
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "rep_01",
+      "userId": "usr_student_demo",
+      "userEmail": "student@pyqverse.edu",
+      "entityType": "question",
+      "entityId": "q_phy_01",
+      "issueType": "typo",
+      "description": "Diagram in option C shows theta near apex instead of base in previous draft.",
+      "status": "resolved",
+      "createdAt": "2025-02-01T11:20:00Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud_01",
+      "actorEmail": "admin@pyqverse.edu",
+      "actorRole": "admin",
+      "action": "PAPER_PUBLISHED",
+      "entity": "QuestionPaper:pap_jee_2024_s1",
+      "details": "Published JEE Main 2024 Session 1 paper with 4 verified questions.",
+      "timestamp": "2025-02-05T10:05:00Z"
+    },
+    {
+      "id": "aud_02",
+      "actorEmail": "editor@pyqverse.edu",
+      "actorRole": "editor",
+      "action": "SOLUTION_VERIFIED",
+      "entity": "Question:q_chem_01",
+      "details": "Added verified step-by-step breakdown and common mistake explanation for iodoform test.",
+      "timestamp": "2025-02-06T14:20:00Z"
+    }
+  ],
+  "googleSheetsSync": {
+    "lastSyncedAt": "2025-02-14T06:30:00Z",
+    "status": "success",
+    "syncedRows": 42,
+    "sheetName": "PYQ_Master_Catalog_2024_2025"
+  }
+}
